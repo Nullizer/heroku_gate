@@ -9,7 +9,7 @@ cat << EOF > /etc/shadowsocks/main-server.json
     "fast_open":false,
     "mode":"tcp_and_udp",
     "plugin":"v2ray-plugin",
-    "plugin_opts":"server;fast-open;path=$SS_PATH"
+    "plugin_opts":"server;path=$SS_PATH"
 }
 EOF
 sed -e "s/\${PORT}/${PORT}/g" \
