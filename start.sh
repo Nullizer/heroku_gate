@@ -12,6 +12,7 @@ cat << EOF > /etc/shadowsocks/main-server.json
     "plugin_opts":"server;fast-open;path=$SS_PATH"
 }
 EOF
+sed -ie "s/\${PORT}/${PORT}/g" /data/nginx.conf
 # ss-server -c /etc/shadowsocks/main-server.json
 cd /data
 nginx -c nginx.conf -p $PWD
