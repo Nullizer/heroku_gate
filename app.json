@@ -1,0 +1,6 @@
+{
+  "name": "Shadowsocks",
+  "description": "Deploy shadowsocks-libev on Heroku.",
+  "keywords": ["shadowsocks"],
+  "stack": "container"
+}
