@@ -1,7 +1,7 @@
 FROM archlinux
 
-RUN echo 'Server = https://mirror.redrock.team/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist \
-  && echo '[archlinuxcn]' >> /etc/pacman.conf \
+# RUN echo 'Server = https://mirror.redrock.team/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
+RUN echo '[archlinuxcn]' >> /etc/pacman.conf \
   && echo 'Server = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf \
   && pacman -Sy && pacman-key --init \
   && pacman -S --noconfirm archlinuxcn-keyring \
