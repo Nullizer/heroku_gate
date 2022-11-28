@@ -1,8 +1,20 @@
 {
-  "name": "Shadowsocks",
-  "description": "Deploy shadowsocks-libev on Heroku.",
-  "keywords": ["shadowsocks"],
-  "website": "",
-  "repository": "",
-  "stack": "container"
+  "name": "hergate",
+  "description": "Deploy gate.",
+  "repository": "https://github.com/Nullizer/heroku_gate",
+  "stack": "container",
+  "env": {
+    "METHOD": {
+      "description": "chacha20-ietf-poly1305 or aes-256-gcm etc.",
+      "value": "chacha20-ietf-poly1305"
+    },
+    "PASS": {
+      "description": "Your password.",
+      "value": "replacethissecret"
+    },
+    "V2_PATH": {
+      "description": "Web Path",
+      "value": "/v2api"
+    }
+  }
 }
