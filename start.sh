@@ -6,7 +6,7 @@ cat << EOF > /etc/shadowsocks-rust/main-server.json
     "password":"$PASS",
     "method":"$METHOD",
     "plugin":"simple-plugin",
-    "plugin_opts":"server;path=$V2_PATH"
+    "plugin_opts":"server;path=$V2_PATH;loglevel=none"
 }
 EOF
 sed -e "s/\${PORT}/${PORT}/g" \
